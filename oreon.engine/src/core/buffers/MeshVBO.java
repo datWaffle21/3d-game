@@ -21,9 +21,6 @@ public class MeshVBO implements VBO {
 		ibId = GL15.glGenBuffers();
 		vaoId = GL30.glGenVertexArrays();
 		
-		
-		
-		
 	}
 	
 	@Override
