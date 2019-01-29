@@ -23,8 +23,8 @@ public class Skydome extends GameObject {
 		renderer.setRenderInfo(new RenderInfo(new CCW(), AtmosphereShader.getInstance()));
 		addComponent(Constants.RENDERER_COMPONENT,renderer);
 		
-		getTransform().setScaling(new Vec3f(Constants.ZFAR * 0.5f,
-											Constants.ZFAR * 0.5f,
-											Constants.ZFAR * 0.5f));
+		getTransform().setScaling(new Vec3f(Constants.ZFAR * .4f,
+											Constants.ZFAR * .4f,
+											Constants.ZFAR * .4f));
 	}
 }
