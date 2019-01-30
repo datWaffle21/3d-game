@@ -2,12 +2,9 @@ package core.scene;
 
 import java.util.HashMap;
 
-import core.math.Transform;
-
-public class GameObject {
+public class GameObject extends Node {
 	
 	public HashMap<String, Component> components;
-	private Transform transform;
 
 	public HashMap<String, Component> getComponents() {
 		return components;
@@ -19,7 +16,6 @@ public class GameObject {
 
 	public GameObject() {
 		components = new HashMap<String, Component>();
-		transform = new Transform();
 	}
 	
 	public void input() {
@@ -28,7 +24,7 @@ public class GameObject {
 			components.get(key).input();
 			
 		}
-		
+		super.input();
 	}
 	
 	public void update() {
@@ -36,7 +32,7 @@ public class GameObject {
 		for(String key : components.keySet()) {
 			components.get(key).update();
 		}
-		
+		super.update();
 	}
 	
 	public void render() {
@@ -45,19 +41,11 @@ public class GameObject {
 			components.get(key).render();
 			
 		}
+		super.render();
 	}
 	
 	public void addComponent(String key, Component component) {
 		component.setParent(this);
 		components.put(key, component);
-	}
-
-	public Transform getTransform() {
-		return transform;
-	}
-
-	public void setTransform(Transform transform) {
-		this.transform = transform;
-	}
-	
+	}	
 }

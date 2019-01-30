@@ -1,4 +1,4 @@
-package modules;
+package modules.sky;
 
 import core.buffers.MeshVBO;
 import core.configs.CCW;
@@ -23,7 +23,7 @@ public class Skydome extends GameObject {
 		renderer.setRenderInfo(new RenderInfo(new CCW(), AtmosphereShader.getInstance()));
 		addComponent(Constants.RENDERER_COMPONENT,renderer);
 		
-		getTransform().setScaling(new Vec3f(Constants.ZFAR * .4f,
+		getWorldTransform().setScaling(new Vec3f(Constants.ZFAR * .4f,
 											Constants.ZFAR * .4f,
 											Constants.ZFAR * .4f));
 	}
