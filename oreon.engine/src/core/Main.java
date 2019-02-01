@@ -9,6 +9,6 @@ public class Main {
 		Game game = new Game();
 		game.getEngine().createWindow(800, 600);
 		game.init();
-		game.launch();		
+		game.launch();
 	}
 }
